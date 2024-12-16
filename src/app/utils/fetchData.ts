@@ -1,9 +1,8 @@
 import axios from "axios";
 
 export const fetchData = async (tokenId: number) => {
-  const response = await axios.post("http://localhost:3000/getMetadataHistory", {
+  const response = await axios.post("https://f48l3fwh28.execute-api.us-east-1.amazonaws.com/getMetadataHistory", {
     tokenId,
-    privateKey: process.env.NEXT_PUBLIC_PRIVATE_KEY,
     contractAddress: process.env.NEXT_PUBLIC_CONTRACT_ADDRESS,
   });
 
