@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import InputBar from "./components/InputBar";
 import MetadataList from "./components/MetadataList";
@@ -43,4 +43,3 @@ const Home = () => {
 };
 
 export default Home;
-

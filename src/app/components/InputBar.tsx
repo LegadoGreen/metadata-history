@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FiSearch } from "react-icons/fi"; // Search icon
-import { AiOutlineLoading3Quarters } from "react-icons/ai"; // Loading spinner
+import { FiSearch } from "react-icons/fi";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 type Props = {
   onSearch: (tokenId: number) => void;
@@ -18,13 +18,13 @@ const InputBar: React.FC<Props> = ({ onSearch, isLoading }) => {
   };
 
   return (
-    <div className="flex items-center justify-center space-x-4 animate-fadeIn">
+    <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-4 sm:space-y-0 w-full px-4 animate-fadeIn">
       <input
         type="number"
         placeholder="Enter Token ID"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        className="w-64 px-4 py-2 text-black rounded-md focus:ring-2 focus:ring-blue-400"
+        className="w-full sm:w-64 px-4 py-2 text-black rounded-md focus:ring-2 focus:ring-blue-400"
       />
       <button
         onClick={handleClick}
